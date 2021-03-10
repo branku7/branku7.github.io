@@ -95,6 +95,7 @@
             //hash = Sha1.hash(pwd);
             hash = CryptoJS.SHA256(pwd);
             console.log(hash);
+            alert([hash].join(''));
 
             var url = hash + "/template/index.html";
              
