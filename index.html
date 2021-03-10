@@ -91,11 +91,10 @@
 
         function loadPage(pwd) {
 
-            var hash = pwd;
+            var hash = CryptoJS.SHA256(pwd);
             //hash = Sha1.hash(pwd);
-            hash = CryptoJS.SHA256(pwd);
-            console.log(hash);
-            alert([hash].join(''));
+            hash = [hash].join('');
+            console.log([hash].join(''));
 
             var url = hash + "/template/index.html";
              
